@@ -1,0 +1,19 @@
+1 - Selecionar o exercicio
+1.1 - Criar a pasta de desenvolvimento e a pasta de testes (Java)
+1.2 - Criar a classe que recebe o algoritmo a ser desenvolvido
+1.3 - Criar a classe que recebe o algoritmo a ser testado
+2 - Fazer copia e cola em um tradutor para que todos possam entender o desafio
+3 - Pegar o texto em portugues e colocar no prompt do Copilot
+4 - Copilot gera a solução da instrução recebida
+4.1 - Copilot escreve passo a passo o que ele vai Fazer
+4.2 - Copilot gera a solução
+5 - Copiamos a solução e colocamos no nosso algoritmo
+6 - Executamos e analisamos o resultado
+7 - Loop de melhoria do codigo até ele atender o proposito do desafio
+8 - Escrever no prompt a instrução: "Criar testes em Junit"
+9 - Fim do exercicio
+
+
+
+Comandos do Copilot
+
