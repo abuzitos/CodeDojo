@@ -17,3 +17,61 @@
 
 Comandos do Copilot
 
+Here are some of the key GitHub Copilot commands available in Visual Studio Code:
+
+GitHub Copilot: Enable
+- Command: GitHub Copilot: Enable
+- Description: Enables GitHub Copilot.
+
+GitHub Copilot: Disable
+- Command: GitHub Copilot: Disable
+- Description: Disables GitHub Copilot.
+
+GitHub Copilot: Open Copilot
+- Command: GitHub Copilot: Open Copilot
+- Description: Opens the GitHub Copilot pane.
+
+GitHub Copilot: Open Copilot Chat
+- Command: GitHub Copilot: Open Copilot Chat
+- Description: Opens the GitHub Copilot chat interface.
+
+GitHub Copilot: Open Copilot Labs
+- Command: GitHub Copilot: Open Copilot Labs
+- Description: Opens the GitHub Copilot Labs interface.
+
+GitHub Copilot: Toggle Copilot
+- Command: GitHub Copilot: Toggle Copilot
+- Description: Toggles GitHub Copilot on or off.
+
+GitHub Copilot: Show Next Suggestion
+- Command: GitHub Copilot: Show Next Suggestion
+- Description: Shows the next suggestion from GitHub Copilot.
+
+GitHub Copilot: Show Previous Suggestion
+- Command: GitHub Copilot: Show Previous Suggestion
+- Description: Shows the previous suggestion from GitHub Copilot.
+
+GitHub Copilot: Accept Suggestion
+- Command: GitHub Copilot: Accept Suggestion
+- Description: Accepts the current suggestion from GitHub Copilot.
+
+GitHub Copilot: Reject Suggestion
+- Command: GitHub Copilot: Reject Suggestion
+- Description: Rejects the current suggestion from GitHub Copilot.
+
+GitHub Copilot: Toggle Copilot Comment Suggestions
+- Command: GitHub Copilot: Toggle Copilot Comment Suggestions
+- Description: Toggles comment suggestions from GitHub Copilot.
+
+GitHub Copilot: Open Copilot Settings
+- Command: GitHub Copilot: Open Copilot Settings
+- Description: Opens the settings for GitHub Copilot.
+
+GitHub Copilot: Provide Feedback
+- Command: GitHub Copilot: Provide Feedback
+- Description: Opens the feedback form for GitHub Copilot.
+
+
+You can access these commands by opening the Command Palette in 
+Visual Studio Code (Ctrl+Shift+P or Cmd+Shift+P on macOS) 
+and typing the command name.
