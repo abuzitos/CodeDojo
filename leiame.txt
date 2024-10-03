@@ -6,13 +6,25 @@
 3 - Pegar o texto em portugues e colocar no prompt do Copilot
 4 - Copilot gera a solução da instrução recebida
 4.1 - Copilot escreve passo a passo o que ele vai Fazer
-4.2 - Copilot gera a solução
+4.2 - Validar se o Copilot montou uma solução que atende o exercicio
+4.3 - Copilot gera a solução
 5 - Copiamos a solução e colocamos no nosso algoritmo
 6 - Executamos e analisamos o resultado
 7 - Loop de melhoria do codigo até ele atender o proposito do desafio
 8 - Escrever no prompt a instrução: "Criar testes em Junit"
 9 - Fim do exercicio
 
+
+Agenda de Trabalho
+
+08:00 - chegar, checar mensagens, preparar para a sessao do dia
+09:30 - trabalho junto com a equipe 01
+11:30 - almoço 
+13:00 - aprendizado na hora com ambas as equipes
+14:00 - intervalo curto
+14:15 - trabalho junto com a equipe 02
+16:15 - debrief, reflect, escrever um pequeno sumario
+17:00 - ir para casa
 
 
 Comandos do Copilot
