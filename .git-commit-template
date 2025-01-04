@@ -1,0 +1,47 @@
+# Formato:
+# <tipo> <mensagem com no máximo 50 caracteres>
+#
+# Tipos permitidos:
+# feat: Nova funcionalidade
+# fix: Correção de bug
+# docs: Atualização na documentação
+# style: Alterações de formatação (sem impacto funcional)
+# refactor: Refatoração de código
+# test: Adição ou atualização de testes
+# chore: Tarefas auxiliares ou manutenção
+
+# Exemplos:
+# feat Adiciona endpoint REST para usuários
+# fix Corrige erro de validação no formulário de login
+# docs Atualiza documentação da API
+# style Ajusta indentação em arquivos CSS
+# refactor Simplifica lógica de autenticação
+# test Adiciona testes para o controlador de pedidos
+# chore Atualiza dependência do Spring Boot para 2.5.4
+
+# Dicas:
+# 1. Seja breve e descritivo.
+# 2. Use até 50 caracteres na mensagem.
+# 3. Para commits grandes, use a descrição longa (abaixo da mensagem principal).
+# 4. Não finalize a linha com ponto (ex.: "Adiciona funcionalidade").
+
+# Mensagem curta (obrigatória):
+# <tipo> <mensagem com no máximo 50 caracteres>
+#
+# Descrição longa (opcional):
+# Se necessário, adicione mais detalhes sobre o commit.
+# Pode incluir informações sobre o porquê da mudança ou
+# referências relacionadas, como issues ou pull requests.
+#
+# Exemplo:
+# feat Adiciona suporte a autenticação via OAuth2
+#
+# Este commit implementa o fluxo de autenticação OAuth2,
+# incluindo suporte para login com Google e Facebook.
+# Resolve #42.
+
+# Configure o Git para usar o arquivo:
+# git config commit.template .git-commit-template
+
+# Exemplo de como funciona
+# git commit

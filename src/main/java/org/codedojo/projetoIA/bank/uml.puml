@@ -1,0 +1,20 @@
+@startuml
+interface AccountService {
+    + deposit(amount: int, date: LocalDate): void
+    + withdraw(amount: int, date: LocalDate): void
+    + printStatement(): void
+    + getBalance(): int
+}
+
+class Account {
+    - balance: int
+    - transactions: List<String>
+    + Account()
+    + deposit(amount: int, date: LocalDate): void
+    + withdraw(amount: int, date: LocalDate): void
+    + printStatement(): void
+    + getBalance(): int
+}
+
+AccountService <|.. Account
+@enduml
