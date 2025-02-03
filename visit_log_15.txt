@@ -1,5 +1,0 @@
-Nome do Visitante: Visitor 26, Horário da Visita: 2024-11-28T14:11:32.969220311
-Nome do Visitante: Visitor 27, Horário da Visita: 2024-11-28T14:11:32.997248795
-Nome do Visitante: Visitor 28, Horário da Visita: 2024-11-28T14:11:33.015215556
-Nome do Visitante: Visitor 29, Horário da Visita: 2024-11-28T14:11:33.025821386
-Nome do Visitante: Visitor 30, Horário da Visita: 2024-11-28T14:11:33.044922937

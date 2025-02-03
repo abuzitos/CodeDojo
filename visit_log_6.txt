@@ -1,5 +1,0 @@
-Nome do Visitante: Visitor 31, Horário da Visita: 2024-10-07T19:15:15.448370614
-Nome do Visitante: Visitor 32, Horário da Visita: 2024-10-07T19:15:15.492163910
-Nome do Visitante: Visitor 33, Horário da Visita: 2024-10-07T19:15:15.525779567
-Nome do Visitante: Visitor 34, Horário da Visita: 2024-10-07T19:15:15.576614241
-Nome do Visitante: Visitor 35, Horário da Visita: 2024-10-07T19:15:15.599550705
