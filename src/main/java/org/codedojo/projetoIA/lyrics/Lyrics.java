@@ -90,37 +90,36 @@ public class Lyrics {
             System.out.print(saida.toString());
             System.out.println();  // Imprimir uma nova linha para melhor legibilidade
         }
-        }
+    }
 
-        private static String getOrdinal(int number) {
+    private static String getOrdinal(int number) {
         switch (number) {
             case 1:
-            return "first";
+                return "first";
             case 2:
-            return "second";
+                return "second";
             case 3:
-            return "third";
+                return "third";
             case 4:
-            return "fourth";
+                return "fourth";
             case 5:
-            return "fifth";
+                return "fifth";
             case 6:
-            return "sixth";
+                return "sixth";
             case 7:
-            return "seventh";
+                return "seventh";
             case 8:
-            return "eighth";
+                return "eighth";
             case 9:
-            return "ninth";
+                return "ninth";
             case 10:
-            return "tenth";
+                return "tenth";
             case 11:
-            return "eleventh";
+                return "eleventh";
             case 12:
-            return "twelfth";
+                return "twelfth";
             default:
-            return "";
-        }
+                return "";
         }
     }
 }
