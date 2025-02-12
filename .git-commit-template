@@ -1,5 +1,5 @@
 # Formato:
-# <tipo> <mensagem com no máximo 50 caracteres>
+# <tipo>(<ID da tarefa>): <mensagem com no máximo 50 caracteres>
 #
 # Tipos permitidos:
 # feat: Nova funcionalidade
@@ -9,6 +9,18 @@
 # refactor: Refatoração de código
 # test: Adição ou atualização de testes
 # chore: Tarefas auxiliares ou manutenção
+# perf: Melhorias de desempenho
+# ci: Mudanças na configuração de integração contínua
+# build: Mudanças que afetam o sistema de build ou dependências
+
+# Exemplo:
+# feat(PROJ-123): Adiciona nova funcionalidade de login
+
+# Descrição detalhada do que foi realizado:
+#
+# - Descreva aqui as mudanças principais realizadas no commit.
+# - Liste os arquivos principais que foram alterados.
+# - Inclua qualquer informação adicional relevante.
 
 # Configure o Git para usar o arquivo:
 # git config commit.template .git-commit-template

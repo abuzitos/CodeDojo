@@ -6,8 +6,11 @@
 package org.codedojo.projetoIA.bank;
 
 import java.time.LocalDate;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -66,5 +69,35 @@ public class AccountTest {
         account.withdraw(500, LocalDate.of(2012, 1, 14));
         account.printStatement();
         // This test is just to ensure the method runs without errors
+    }
+
+    @Test
+    public void testWithdrawInsufficientFundsError() {
+        account.deposit(50, LocalDate.now());
+        account.withdraw(100, LocalDate.now());
+        assertTrue(account.getTransactions().get(1).contains("ERROR: Insufficient funds"));
+    }
+
+    @Test
+    public void testPrintStatementJson() {
+        account.deposit(1000, LocalDate.of(2012, 1, 10));
+        account.deposit(2000, LocalDate.of(2012, 1, 13));
+        account.withdraw(500, LocalDate.of(2012, 1, 14));
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        account.printStatementJson();
+
+        String expectedOutput = "{\n" +
+                "\"balance\": 2500,\n" +
+                "\"transactions\": [\n" +
+                "\"Date: 2012-01-10 || Amount: 1000 ||Balance 1000\",\n" +
+                "\"Date: 2012-01-13 || Amount: 2000 ||Balance 3000\",\n" +
+                "\"Date: 2012-01-14 || Amount: 500 ||Balance 2500\",\n" +
+                "]\n" +
+                "}\n";
+
+        assertEquals(expectedOutput, outContent.toString());
     }
 }

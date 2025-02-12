@@ -134,4 +134,13 @@ public class Audit {
             audit.displayVisitorInfo();
         }
     }
+
+    // calculo da media do aluno
+    public double calcularMedia(double[] notas) {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
+    }
 }

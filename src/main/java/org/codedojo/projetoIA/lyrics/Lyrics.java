@@ -78,13 +78,49 @@ public class Lyrics {
             // Adicionar o novo verso no topo da lista
             cancoes.add(0, versos[dia]);
 
-            // Imprimir o estado atual da lista
-            System.out.println("On the " + (dia + 1) + " day of Christmas");
-            System.out.println("My true love sent to me:");
+            // Construir a saída para o dia atual
+            StringBuilder saida = new StringBuilder();
+            saida.append("On the ").append(getOrdinal(dia + 1)).append(" day of Christmas\n");
+            saida.append("My true love sent to me:\n");
             for (String verso : cancoes) {
-                System.out.println(verso);
+            saida.append(verso).append("\n");
             }
+
+            // Imprimir a saída
+            System.out.print(saida.toString());
             System.out.println();  // Imprimir uma nova linha para melhor legibilidade
+        }
+        }
+
+        private static String getOrdinal(int number) {
+        switch (number) {
+            case 1:
+            return "first";
+            case 2:
+            return "second";
+            case 3:
+            return "third";
+            case 4:
+            return "fourth";
+            case 5:
+            return "fifth";
+            case 6:
+            return "sixth";
+            case 7:
+            return "seventh";
+            case 8:
+            return "eighth";
+            case 9:
+            return "ninth";
+            case 10:
+            return "tenth";
+            case 11:
+            return "eleventh";
+            case 12:
+            return "twelfth";
+            default:
+            return "";
+        }
         }
     }
 }
