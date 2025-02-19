@@ -33,9 +33,19 @@ import java.util.List;
  *           description: A lista de transações realizadas na conta.
  */
 public class Account implements AccountService {
+    /**
+     * O saldo atual da conta.
+     */
     private int balance;
+
+    /**
+     * A lista de transações realizadas na conta.
+     */
     private final List<String> transactions;
 
+    /**
+     * Construtor da classe Account. Inicializa o saldo e a lista de transações.
+     */
     public Account() {
         this.balance = 0;
         this.transactions = new ArrayList<>();
@@ -64,11 +74,16 @@ public class Account implements AccountService {
      *       200:
      *         description: Depósito realizado com sucesso.
      */
+    /**
+     * Deposita um valor na conta.
+     *
+     * @param amount O valor a ser depositado.
+     * @param date A data do depósito.
+     */
     @Override
     public void deposit(int amount, LocalDate date) {
         if (amount > 0) {
             balance += amount;
-            //transactions.add("Deposited: " + amount + " on " + date);
             transactions.add("Date: " + date + " || " +
                              "Amount: " + amount + " ||" +
                              "Balance " + balance);
@@ -102,6 +117,12 @@ public class Account implements AccountService {
      *       400:
      *         description: Fundos insuficientes.
      */
+    /**
+     * Retira um valor da conta.
+     *
+     * @param amount O valor a ser retirado.
+     * @param date A data da retirada.
+     */
     @Override
     public void withdraw(int amount, LocalDate date) {
         if (amount > 0 && amount <= balance) {
@@ -110,7 +131,6 @@ public class Account implements AccountService {
                              "Amount: " + amount + " ||" +
                              "Balance " + balance);
         } else {
-            //System.out.println("Invalid withdraw amount.");
             transactions.add("Date: " + date + " || " +
                              "Amount: " + amount + " ||" +
                              "Balance " + balance + " || " +
@@ -126,6 +146,9 @@ public class Account implements AccountService {
      *     responses:
      *       200:
      *         description: Extrato impresso com sucesso.
+     */
+    /**
+     * Imprime o extrato da conta.
      */
     @Override
     public void printStatement() {
@@ -150,6 +173,11 @@ public class Account implements AccountService {
      *               type: integer
      *               description: O saldo atual da conta.
      */
+    /**
+     * Retorna o saldo atual da conta.
+     *
+     * @return O saldo atual da conta.
+     */
     @Override
     public int getBalance() {
         return balance;
@@ -171,10 +199,20 @@ public class Account implements AccountService {
      *                 type: string
      *               description: A lista de transações realizadas na conta.
      */
+    /**
+     * Retorna a lista de transações realizadas na conta.
+     *
+     * @return A lista de transações realizadas na conta.
+     */
     public List<String> getTransactions() {
         return transactions;
     }
 
+    /**
+     * Método principal para testes manuais.
+     *
+     * @param args Argumentos da linha de comando.
+     */
     public static void main(String[] args) {
         Account account = new Account();
         account.deposit(500, LocalDate.now());
@@ -184,7 +222,9 @@ public class Account implements AccountService {
         account.printStatement();
     }
 
-    // criar um metodo que realiza a saida do extrato em um arquivo yaml
+    /**
+     * Imprime o extrato da conta em formato JSON.
+     */
     public void printStatementJson() {
         System.out.println("{");
         System.out.println("\"balance\": " + balance + ",");
@@ -195,5 +235,4 @@ public class Account implements AccountService {
         System.out.println("]");
         System.out.println("}");
     }
-
 }

@@ -28,6 +28,14 @@ public class AccountTest {
         assertEquals(100, account.getBalance());
     }
 
+    /**
+     * Testa o método withdraw da classe Account.
+     * 
+     * Cenário:
+     * 1. Deposita 100 na conta.
+     * 2. Saca 50 da conta.
+     * 3. Verifica se o saldo final é 50.
+     */
     @Test
     public void testWithdraw() {
         account.deposit(100, LocalDate.now());
