@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 public class SocialNetwork {
     private final Map<String, User> users;
@@ -39,6 +40,14 @@ public class SocialNetwork {
         }
     }
 
+    public void unfollowUser(String followerName, String followeeName) {
+        User follower = users.get(followerName);
+        User followee = users.get(followeeName);
+        if (follower != null && followee != null) {
+            follower.unfollowUser(followee);
+        }
+    }
+
     public void mentionUser(String userName, String mentionedUserName, String message) {
         User user = users.get(userName);
         User mentionedUser = users.get(mentionedUserName);
@@ -53,6 +62,18 @@ public class SocialNetwork {
         if (sender != null && receiver != null) {
             sender.sendDirectMessage(receiver, message);
         }
+    }
+
+    public List<String> viewAggregatedTimeline(String userName) {
+        User user = users.get(userName);
+        if (user != null) {
+            List<String> aggregatedTimeline = new ArrayList<>();
+            for (User followee : user.getFollowees()) {
+                aggregatedTimeline.addAll(followee.viewTimeline());
+            }
+            return aggregatedTimeline;
+        }
+        return Collections.emptyList();
     }
     
     public static void main(String[] args) {
@@ -75,7 +96,7 @@ public class SocialNetwork {
         network.followUser("Charlie", "Alice");
         network.followUser("Charlie", "Bob");
         network.postMessage("Bob", "Hello, this is Bob's first post!");
-        System.out.println("Charlie's Aggregated Timeline: " + network.viewTimeline("Charlie"));
+        System.out.println("Charlie's Aggregated Timeline: " + network.viewAggregatedTimeline("Charlie"));
 
         // Mentions: Bob can link to Charlie in a message using “@”
         network.mentionUser("Bob", "Charlie", "Hey @Charlie, check this out!");
