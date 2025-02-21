@@ -8,15 +8,11 @@ public class Diamond {
      * 
      * For example, if the input letter is 'C', the output will be:
      * 
-     * A
-     * B B
-     * C C
-     * B B
-     * A A
-     * B B
-     * C C
-     * B B
-     * A
+     *   A
+     *  B B
+     * C   C
+     *  B B
+     *   A
      * 
      * @param letter the letter at the widest point of the diamond
      * @return a string representing the diamond shape pattern
