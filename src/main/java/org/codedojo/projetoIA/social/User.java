@@ -1,23 +1,25 @@
 package org.codedojo.projetoIA.social;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class User {
     private final String nameUser;
     private final List<String> timeline;
-    private final Set<User> following;
+    private final List<User> followees;
     private final List<String> mentions;
     private final List<String> directMessages;
+    private final List<User> blockedUsers;
+
+
 
     public User(String name) {
         this.nameUser = name;
         this.timeline = new ArrayList<>();
-        this.following = new HashSet<>();
+        this.followees = new ArrayList<>();
         this.mentions = new ArrayList<>();
         this.directMessages = new ArrayList<>();
+        this.blockedUsers = new ArrayList<>();
     }
 
     public void postMessage(String message) {
@@ -25,21 +27,16 @@ public class User {
     }
 
     public List<String> viewTimeline() {
-        List<String> aggregatedTimeline = new ArrayList<>(timeline);
-        aggregatedTimeline.add("<------- Timeline ------->\n");
-        for (User user : following) {
-            aggregatedTimeline.addAll(user.timeline);
-        }
-        aggregatedTimeline.add("<------- Fim Timeline ------->\n");
-        return aggregatedTimeline;
+        return new ArrayList<>(timeline);
     }
 
     public void followUser(User user) {
         System.out.println("Eu:" + this.getName() + " Seguindo User: " + user.getName());
-        following.add(user);
+        followees.add(user);
     }
 
     public void mentionUser(User user, String message) {
+        timeline.add(message);
         user.mentions.add(message);
     }
 
@@ -49,5 +46,19 @@ public class User {
 
     public String getName() {
         return nameUser;
+    }
+
+    public void unfollowUser(User user) {
+        followees.remove(user);
+    }
+
+    public List<User> getFollowees() {
+        return followees;
+    }
+
+    public void blockUser(User user) {
+        if (!blockedUsers.contains(user)) {
+            blockedUsers.add(user);
+        }
     }
 }

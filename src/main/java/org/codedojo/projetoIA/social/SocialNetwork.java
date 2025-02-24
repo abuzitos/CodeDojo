@@ -27,7 +27,11 @@ public class SocialNetwork {
     public List<String> viewTimeline(String userName) {
         User user = users.get(userName);
         if (user != null) {
-            return user.viewTimeline();
+            List<String> timeline = new ArrayList<>(user.viewTimeline());
+            for (User followee : user.getFollowees()) {
+                timeline.addAll(followee.viewTimeline());
+            }
+            return timeline;
         }
         return Collections.emptyList();
     }
@@ -74,6 +78,18 @@ public class SocialNetwork {
             return aggregatedTimeline;
         }
         return Collections.emptyList();
+    }
+
+    public void removeUser(String userName) {
+        users.remove(userName);
+    }
+
+    public void blockUser(String blockerName, String blockedName) {
+        User blocker = users.get(blockerName);
+        User blocked = users.get(blockedName);
+        if (blocker != null && blocked != null) {
+            blocker.blockUser(blocked);
+        }
     }
     
     public static void main(String[] args) {
